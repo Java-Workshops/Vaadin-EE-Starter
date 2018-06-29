@@ -1,6 +1,6 @@
 workspace:
   base: /drone/src
-  path: workshop-industrial-vaadin
+  path: workshop-vaadin-ee-starter
 
 pipeline:
   build:
@@ -11,19 +11,19 @@ pipeline:
       - echo -n "$TB_LICENSE" > /root/vaadin.testbench.developer.license
       - mkdir /root/.m2
       - mkdir /root/.testbenchextensions
-      - cp /drone/src/workshop-industrial-vaadin/_data/nexus/settings.xml /root/.m2/settings.xml
-      - cp /drone/src/workshop-industrial-vaadin/_data/configs/config-drone.properties /root/.testbenchextensions/config.properties
+      - cp /drone/src/workshop-vaadin-ee-starter/_data/nexus/settings.xml /root/.m2/settings.xml
+      - cp /drone/src/workshop-vaadin-ee-starter/_data/configs/config-drone.properties /root/.testbenchextensions/config.properties
 #      - cat ${GPG_KEY_PRIVATE} > /root/.gnupg/secring.gpg
 #      - cat ${GPG_KEY_PUBLIC} > /root/.gnupg/pubring.gpg
       - mvn clean --batch-mode
-      - mvn test -P repo-allow-vaadin --batch-mode
+      - mvn test --batch-mode
 
 matrix:
   JDK_VERSION:
-  - svenruppert/maven-3.5-jdk-08
-  - svenruppert/maven-3.5-jdk-09
+#  - svenruppert/maven-3.5-jdk-08
+#  - svenruppert/maven-3.5-jdk-09
   - svenruppert/maven-3.5-jdk-10
-  - svenruppert/maven-3.5-jdk-oracle-09
-  - svenruppert/maven-3.5-jdk-zulu-08
-  - svenruppert/maven-3.5-jdk-zulu-09
+  - svenruppert/maven-3.5-jdk-oracle-10
+  - svenruppert/maven-3.5-jdk-zulu-10
+#  - svenruppert/maven-3.5-jdk-zulu-09
   
