@@ -1,7 +1,8 @@
 .idea/*
 *.iml
 
-
+/parts/p010/_data/webdrivers/
+/parts/p020/_data/webdrivers/
 
 
 # Created by .ignore support plugin (hsz.mobi)
@@ -293,3 +294,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
