@@ -7,3 +7,4 @@ docker tag svenruppert/vaadin-ee-starter-p010:latest svenruppert/vaadin-ee-start
 
 #docker run --rm -d -p 8080:8080 -p 4848:4848 --name wildfly svenruppert/vaadin-ee-starter-p010
 docker run --rm -it -p 8080:8080 -p 4848:4848 --name wildfly svenruppert/vaadin-ee-starter-p010
+#docker run --rm -it -p 4848:4848 -p 8009:8009 -p 8080:8080 -p 8181:8181 --name glassfish svenruppert/vaadin-ee-starter-p010

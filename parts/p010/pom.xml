@@ -17,41 +17,12 @@
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-testbench-ng-bom</artifactId>
-        <version>${rapidpm-testbench-ng.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.rapidpm</groupId>
-        <artifactId>rapidpm-testbench-ng-bom-vaadin-v10</artifactId>
-        <version>${rapidpm-testbench-ng.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
 
-    <dependency>
-      <groupId>org.rapidpm</groupId>
-      <artifactId>rapidpm-testbench-ng-m-framework-v10</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.rapidpm</groupId>
-      <artifactId>rapidpm-testbench-ng-m-webdriver</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.rapidpm</groupId>
-      <artifactId>rapidpm-testbench-ng-pageobject-vaadin-v10-tb</artifactId>
-      <scope>test</scope>
-    </dependency>
 
   </dependencies>
 

@@ -76,6 +76,7 @@
 
     <!--Vaadin Versions-->
     <vaadin.version>10.0.1</vaadin.version>
+    <vaadin-testbench-v10.version>6.0.0</vaadin-testbench-v10.version>
 
 
     <!--Runtime Versions - EE Containers-->
@@ -111,6 +112,44 @@
         <scope>import</scope>
         <version>${vaadin.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>testbench-ng-bom</artifactId>
+        <version>${rapidpm-testbench-ng.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm</groupId>
+        <artifactId>testbench-ng-bom-vaadin-v10</artifactId>
+        <version>${rapidpm-testbench-ng.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.vaadin</groupId>
+        <artifactId>vaadin-testbench</artifactId>
+        <version>${vaadin.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+          </exclusion>
+        </exclusions>
+        <!--<scope>test</scope>-->
+      </dependency>
+      <dependency>
+        <groupId>com.vaadin</groupId>
+        <artifactId>vaadin-testbench-core</artifactId>
+        <version>${vaadin-testbench-v10.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+          </exclusion>
+        </exclusions>
+        <!--<scope>test</scope>-->
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -135,6 +174,21 @@
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-lumo-theme</artifactId>
+    </dependency>
+
+
+    <!--TDD-->
+
+
+    <dependency>
+      <groupId>org.rapidpm</groupId>
+      <artifactId>testbench-ng-m-framework-v10</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.rapidpm</groupId>
+      <artifactId>testbench-ng-m-pageobject-vaadin-v10-tb</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -197,7 +251,7 @@
       <dependencies>
         <dependency>
           <groupId>org.rapidpm</groupId>
-          <artifactId>rapidpm-testbench-ng-m-container-init-meecrowave</artifactId>
+          <artifactId>testbench-ng-m-container-init-meecrowave</artifactId>
           <version>${rapidpm-testbench-ng.version}</version>
           <scope>test</scope>
         </dependency>

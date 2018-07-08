@@ -1,13 +1,13 @@
 package junit.org.rapidpm.vaadin.ee.starter;
 
 import com.vaadin.flow.component.button.testbench.ButtonElement;
-import com.vaadin.flow.component.html.testbench.LabelElement;
+import com.vaadin.flow.component.html.testbench.SpanElement;
 import org.openqa.selenium.WebDriver;
 import org.rapidpm.vaadin.addons.testbench.junit5.pageobject.AbstractVaadinPageObject;
 
 import static java.lang.Integer.valueOf;
 import static org.rapidpm.vaadin.ee.starter.VaadinApp.BTN_CLICK_ME;
-import static org.rapidpm.vaadin.ee.starter.VaadinApp.LB_CLICK_COUNT;
+import static org.rapidpm.vaadin.ee.starter.VaadinApp.SPAN_CLICK_COUNT;
 
 public class VaadinAppPageObject extends AbstractVaadinPageObject {
 
@@ -20,8 +20,8 @@ public class VaadinAppPageObject extends AbstractVaadinPageObject {
     return btn().id(BTN_CLICK_ME);
   }
 
-  public LabelElement lbClickCount() {
-    return label().id(LB_CLICK_COUNT);
+  public SpanElement spanClickCount() {
+    return span().id(SPAN_CLICK_COUNT);
   }
 
   public void click() {
@@ -29,7 +29,7 @@ public class VaadinAppPageObject extends AbstractVaadinPageObject {
   }
 
   public String clickCountAsString() {
-    return lbClickCount().getText();
+    return spanClickCount().getText();
   }
 
   // no exception handling
